@@ -1,0 +1,74 @@
+{
+  "_mock": "Mimics Google Drive API files.list. 'path' points to the file's content, relative to this folder. Folder links look like https://drive.google.com/drive/folders/<id>.",
+  "files": [
+    {
+      "id": "1mockFolderCustomers",
+      "name": "Customers",
+      "mimeType": "application/vnd.google-apps.folder",
+      "parents": [],
+      "modifiedTime": "2026-10-14T09:00:00Z",
+      "webViewLink": "https://drive.google.com/drive/folders/1mockFolderCustomers"
+    },
+    {
+      "id": "1mockFolderAcme",
+      "name": "Acme Industrial",
+      "mimeType": "application/vnd.google-apps.folder",
+      "parents": ["1mockFolderCustomers"],
+      "modifiedTime": "2026-10-14T09:00:00Z",
+      "webViewLink": "https://drive.google.com/drive/folders/1mockFolderAcme"
+    },
+    {
+      "id": "1mockDocAcmeOrderForm",
+      "name": "Acme Industrial - Order Form (signed)",
+      "mimeType": "application/vnd.google-apps.document",
+      "parents": ["1mockFolderAcme"],
+      "modifiedTime": "2026-09-28T18:12:00Z",
+      "webViewLink": "https://docs.google.com/document/d/1mockDocAcmeOrderForm/edit",
+      "path": "files/acme-order-form.md"
+    },
+    {
+      "id": "1mockSheetAcmeMap",
+      "name": "Acme Industrial - Mutual Action Plan",
+      "mimeType": "application/vnd.google-apps.spreadsheet",
+      "parents": ["1mockFolderAcme"],
+      "modifiedTime": "2026-10-15T11:30:00Z",
+      "webViewLink": "https://docs.google.com/spreadsheets/d/1mockSheetAcmeMap/edit",
+      "path": "files/acme-mutual-action-plan.csv"
+    },
+    {
+      "id": "1mockDocAcmeHandoff",
+      "name": "Acme Industrial - Sales Handoff Notes",
+      "mimeType": "application/vnd.google-apps.document",
+      "parents": ["1mockFolderAcme"],
+      "modifiedTime": "2026-10-14T12:05:00Z",
+      "webViewLink": "https://docs.google.com/document/d/1mockDocAcmeHandoff/edit",
+      "path": "files/acme-sales-handoff.md"
+    },
+    {
+      "id": "1mockDocAcmeSecurity",
+      "name": "Acme Industrial - IT and Security Requirements",
+      "mimeType": "application/vnd.google-apps.document",
+      "parents": ["1mockFolderAcme"],
+      "modifiedTime": "2026-10-09T08:45:00Z",
+      "webViewLink": "https://docs.google.com/document/d/1mockDocAcmeSecurity/edit",
+      "path": "files/acme-it-security-requirements.md"
+    },
+    {
+      "id": "1mockFolderNorthwind",
+      "name": "Northwind Logistics",
+      "mimeType": "application/vnd.google-apps.folder",
+      "parents": ["1mockFolderCustomers"],
+      "modifiedTime": "2026-10-02T09:00:00Z",
+      "webViewLink": "https://drive.google.com/drive/folders/1mockFolderNorthwind"
+    },
+    {
+      "id": "1mockDocNorthwindProposal",
+      "name": "Northwind Logistics - Proposal (draft)",
+      "mimeType": "application/vnd.google-apps.document",
+      "parents": ["1mockFolderNorthwind"],
+      "modifiedTime": "2026-10-02T14:20:00Z",
+      "webViewLink": "https://docs.google.com/document/d/1mockDocNorthwindProposal/edit",
+      "path": "files/northwind-proposal.md"
+    }
+  ]
+}

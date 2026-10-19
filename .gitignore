@@ -1,0 +1,11 @@
+# Local Claude Code settings
+.claude/settings.local.json
+
+# Customer data never belongs in this repo
+**/profile.json
+
+# OS / editor
+.DS_Store
+Thumbs.db
+.vscode/
+node_modules/

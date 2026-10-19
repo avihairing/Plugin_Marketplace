@@ -1,0 +1,16 @@
+{
+  "name": "dealhub-plugins",
+  "description": "Internal Claude plugins for DealHub teams.",
+  "owner": {
+    "name": "DealHub Customer Success"
+  },
+  "plugins": [
+    {
+      "name": "dealhub-onboarding",
+      "source": "./plugins/dealhub-onboarding",
+      "description": "Run DealHub customer onboarding: gather context from Gong, Fathom, Google Docs and the CSM, then generate the kickoff deck from the company Google Slides template.",
+      "category": "customer-success",
+      "tags": ["customer-success", "onboarding", "csm"]
+    }
+  ]
+}

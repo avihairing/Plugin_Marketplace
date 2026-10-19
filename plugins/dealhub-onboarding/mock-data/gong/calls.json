@@ -1,0 +1,62 @@
+{
+  "_mock": "Mimics Gong API GET /v2/calls with parties from POST /v2/calls/extensive. Transcript paths are relative to this folder.",
+  "calls": [
+    {
+      "id": "7782341190001",
+      "url": "https://app.gong.io/call?id=7782341190001",
+      "title": "Acme Industrial <> DealHub | Discovery",
+      "started": "2026-08-12T15:00:00Z",
+      "duration": 2940,
+      "account": "Acme Industrial",
+      "parties": [
+        { "name": "Dana Levi", "emailAddress": "dana.levi@dealhub.example", "title": "Account Executive", "affiliation": "Internal" },
+        { "name": "Mark Stone", "emailAddress": "mark.stone@acme-industrial.example", "title": "Chief Revenue Officer", "affiliation": "External" },
+        { "name": "Jane Doe", "emailAddress": "jane.doe@acme-industrial.example", "title": "VP Revenue Operations", "affiliation": "External" }
+      ],
+      "transcript": "transcripts/7782341190001.md"
+    },
+    {
+      "id": "7782341190002",
+      "url": "https://app.gong.io/call?id=7782341190002",
+      "title": "Acme Industrial | CPQ + DealRoom demo",
+      "started": "2026-08-26T14:00:00Z",
+      "duration": 3480,
+      "account": "Acme Industrial",
+      "parties": [
+        { "name": "Dana Levi", "emailAddress": "dana.levi@dealhub.example", "title": "Account Executive", "affiliation": "Internal" },
+        { "name": "Tom Bar", "emailAddress": "tom.bar@dealhub.example", "title": "Solution Engineer", "affiliation": "Internal" },
+        { "name": "Jane Doe", "emailAddress": "jane.doe@acme-industrial.example", "title": "VP Revenue Operations", "affiliation": "External" },
+        { "name": "Karen Wu", "emailAddress": "karen.wu@acme-industrial.example", "title": "Sales Director, North America", "affiliation": "External" },
+        { "name": "Luis Ortega", "emailAddress": "luis.ortega@acme-industrial.example", "title": "Finance Controller", "affiliation": "External" }
+      ],
+      "transcript": "transcripts/7782341190002.md"
+    },
+    {
+      "id": "7782341190003",
+      "url": "https://app.gong.io/call?id=7782341190003",
+      "title": "Acme Industrial | Commercials and next steps",
+      "started": "2026-09-18T16:30:00Z",
+      "duration": 2100,
+      "account": "Acme Industrial",
+      "parties": [
+        { "name": "Dana Levi", "emailAddress": "dana.levi@dealhub.example", "title": "Account Executive", "affiliation": "Internal" },
+        { "name": "Mark Stone", "emailAddress": "mark.stone@acme-industrial.example", "title": "Chief Revenue Officer", "affiliation": "External" },
+        { "name": "Jane Doe", "emailAddress": "jane.doe@acme-industrial.example", "title": "VP Revenue Operations", "affiliation": "External" }
+      ],
+      "transcript": "transcripts/7782341190003.md"
+    },
+    {
+      "id": "7782341190004",
+      "url": "https://app.gong.io/call?id=7782341190004",
+      "title": "Northwind Logistics | Intro + discovery",
+      "started": "2026-09-30T13:00:00Z",
+      "duration": 1800,
+      "account": "Northwind Logistics",
+      "parties": [
+        { "name": "Ari Gold", "emailAddress": "ari.gold@dealhub.example", "title": "Account Executive", "affiliation": "Internal" },
+        { "name": "Sam Patel", "emailAddress": "sam.patel@northwind-logistics.example", "title": "Head of Sales Operations", "affiliation": "External" }
+      ],
+      "transcript": "transcripts/7782341190004.md"
+    }
+  ]
+}

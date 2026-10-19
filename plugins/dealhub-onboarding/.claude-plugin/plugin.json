@@ -1,0 +1,48 @@
+{
+  "name": "dealhub-onboarding",
+  "displayName": "DealHub Customer Onboarding",
+  "version": "0.1.0",
+  "description": "Run DealHub customer onboarding: gather context from Gong, Fathom, Google Docs and the CSM into one customer profile, then generate the kickoff deck from the company Google Slides template. Includes a debug mode that uses local mock data.",
+  "author": {
+    "name": "DealHub Customer Success"
+  },
+  "keywords": ["customer-success", "onboarding", "kickoff", "gong", "fathom", "google-slides"],
+  "userConfig": {
+    "workspace_dir": {
+      "type": "directory",
+      "title": "Onboarding workspace folder",
+      "description": "Folder that holds one sub-folder per customer (profile, sources, log). Debug runs go to its _debug sub-folder.",
+      "default": "~/DealHub Onboarding"
+    },
+    "kickoff_template_id": {
+      "type": "string",
+      "title": "Kickoff template (Google Slides ID)",
+      "description": "ID of the company kickoff template: the part of its URL between /d/ and /edit. Not needed in debug mode.",
+      "default": ""
+    },
+    "drive_folder_id": {
+      "type": "string",
+      "title": "Drive folder for generated decks (optional)",
+      "description": "Google Drive folder ID where new decks are saved. Leave blank to save in My Drive.",
+      "default": ""
+    },
+    "google_email": {
+      "type": "string",
+      "title": "Your Google Workspace email",
+      "description": "The DealHub Google account used to read Drive and build decks. Not needed in debug mode.",
+      "default": ""
+    },
+    "google_oauth_client_id": {
+      "type": "string",
+      "title": "Google OAuth client ID",
+      "description": "Company Google OAuth client (Desktop app) for the Google Workspace connector. Ask CS Ops / IT. Not needed in debug mode.",
+      "default": ""
+    },
+    "google_oauth_client_secret": {
+      "type": "string",
+      "title": "Google OAuth client secret",
+      "description": "Secret for the client ID above. Stored in secure storage, not in settings files. Not needed in debug mode.",
+      "sensitive": true
+    }
+  }
+}

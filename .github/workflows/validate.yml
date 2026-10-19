@@ -1,0 +1,30 @@
+name: Validate plugins
+
+on:
+  pull_request:
+  push:
+    branches: [main]
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+      - name: Install Claude Code
+        run: npm install -g @anthropic-ai/claude-code
+      - name: Validate marketplace
+        run: claude plugin validate .
+      - name: Validate each plugin
+        run: |
+          for dir in plugins/*/; do
+            echo "::group::$dir"
+            claude plugin validate "$dir"
+            echo "::endgroup::"
+          done
+      - name: Check hook scripts parse
+        run: |
+          shopt -s nullglob
+          for f in plugins/*/hooks/scripts/*.js; do node --check "$f"; done

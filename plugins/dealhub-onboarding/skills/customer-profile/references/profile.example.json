@@ -1,0 +1,109 @@
+{
+  "schema_version": 1,
+  "updated_at": "2026-10-19T09:30:00Z",
+  "customer": {
+    "name": "Acme Industrial",
+    "slug": "acme-industrial",
+    "website": "acme-industrial.example",
+    "industry": "Industrial equipment manufacturing",
+    "hq": "Chicago, IL, US",
+    "employees": "~1,200",
+    "segment": "Mid-Market",
+    "logo_url": "",
+    "src": ["S3"]
+  },
+  "deal": {
+    "products": ["CPQ", "DealRoom"],
+    "licenses": 120,
+    "contract_start": "2026-10-01",
+    "term_months": 36,
+    "account_executive": "Dana Levi",
+    "solution_engineer": "Tom Bar",
+    "src": ["S3", "S4"]
+  },
+  "people": [
+    { "name": "Jane Doe", "title": "VP Revenue Operations", "email": "jane.doe@acme-industrial.example", "side": "customer", "role": "project_lead", "src": ["S1", "S4"] },
+    { "name": "Mark Stone", "title": "CRO", "email": "", "side": "customer", "role": "executive_sponsor", "src": ["S1"] },
+    { "name": "Priya Shah", "title": "Salesforce Admin", "email": "", "side": "customer", "role": "admin", "src": ["S2"] },
+    { "name": "Noa Cohen", "title": "Customer Success Manager", "email": "", "side": "dealhub", "role": "csm", "src": ["S4"] },
+    { "name": "Eli Ron", "title": "Implementation Consultant", "email": "", "side": "dealhub", "role": "implementation_lead", "src": ["S4"] }
+  ],
+  "current_state": {
+    "crm": "Salesforce",
+    "erp": "NetSuite",
+    "esign": "DocuSign",
+    "other_systems": ["Excel price books"],
+    "quoting_today": "Reps build quotes in Excel and Word; discounts above 15% are approved over email.",
+    "pain_points": [
+      { "text": "Quotes take 2-3 days because approvals happen over email", "quote": "Half my deals stall waiting on a discount approval.", "src": ["S1"] },
+      { "text": "Price book lives in spreadsheets that drift out of date", "quote": "", "src": ["S2"] }
+    ],
+    "src": ["S1", "S2"]
+  },
+  "goals": [
+    { "goal": "Cut quote turnaround from days to same-day", "metric": "Median time-to-quote < 4 hours", "src": ["S1"] },
+    { "goal": "Enforce discount guardrails", "metric": "100% of >15% discounts routed through approval workflow", "src": ["S1", "S3"] }
+  ],
+  "scope": {
+    "in_scope": [
+      { "item": "CPQ for the North America direct sales team", "src": ["S3"] },
+      { "item": "DealRoom for enterprise deals", "src": ["S3"] }
+    ],
+    "out_of_scope": [
+      { "item": "Billing / subscription management (phase 2)", "src": ["S4"] }
+    ],
+    "integrations": [
+      { "system": "Salesforce", "direction": "bi-directional", "notes": "Opportunity + quote sync", "src": ["S2"] },
+      { "system": "DocuSign", "direction": "outbound", "notes": "E-signature on approved quotes", "src": ["S2"] }
+    ]
+  },
+  "timeline": {
+    "kickoff_date": "2026-10-27",
+    "target_go_live": "2027-01-15",
+    "milestones": [
+      { "name": "Overview session (DealHub showcase)", "date": "2026-11-03", "src": ["S4"] },
+      { "name": "Discovery workshops complete", "date": "2026-11-20", "src": ["S4"] }
+    ],
+    "src": ["S3", "S4"]
+  },
+  "risks": [
+    { "risk": "Salesforce admin is shared with another project", "severity": "medium", "mitigation": "Agree on weekly admin hours at kickoff", "owner": "Jane Doe", "src": ["S2"] }
+  ],
+  "open_questions": [
+    { "question": "Which regions are in the first rollout wave?", "owner": "customer", "src": ["S4"] }
+  ],
+  "action_items": [
+    { "item": "Share current price book and discount matrix", "owner": "Jane Doe", "due": "2026-10-31", "status": "open", "src": ["S4"] }
+  ],
+  "commitments": [
+    { "commitment": "Salesforce sync live before go-live, no extra cost", "made_by": "Dana Levi (AE)", "src": ["S1"] }
+  ],
+  "internal_notes": [
+    { "note": "CRO was skeptical in negotiation; keep exec updates short and metric-led", "src": ["S4"] }
+  ],
+  "conflicts": [
+    {
+      "field": "timeline.target_go_live",
+      "values": [
+        { "value": "2027-01-15", "src": ["S3"] },
+        { "value": "2026-12-15", "src": ["S1"] }
+      ],
+      "resolution": "Kept 2027-01-15 (signed order form). Confirm with customer at kickoff.",
+      "status": "open"
+    }
+  ],
+  "phases": {
+    "kickoff": { "status": "in_progress", "deck_url": "", "session_date": "2026-10-27", "updated_at": "2026-10-19T09:30:00Z" },
+    "overview": { "status": "not_started" },
+    "discovery": { "status": "not_started" },
+    "weekly_update": { "status": "not_started", "channel": "email", "last_sent": "" },
+    "steering_committee": { "status": "not_started", "cadence": "monthly", "last_held": "" },
+    "configuration": { "status": "not_started" }
+  },
+  "sources": [
+    { "id": "S1", "type": "gong", "title": "Acme - discovery call with CRO", "date": "2026-08-12", "ref": "https://app.gong.io/call?id=0000000000" },
+    { "id": "S2", "type": "fathom", "title": "Acme - technical deep dive", "date": "2026-09-02", "ref": "https://fathom.video/calls/000000" },
+    { "id": "S3", "type": "gdoc", "title": "Acme - signed order form", "date": "2026-09-28", "ref": "https://docs.google.com/document/d/EXAMPLE" },
+    { "id": "S4", "type": "csm", "title": "CSM interview (Noa Cohen)", "date": "2026-10-19", "ref": "" }
+  ]
+}

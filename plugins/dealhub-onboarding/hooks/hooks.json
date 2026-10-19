@@ -1,0 +1,28 @@
+{
+  "description": "DealHub onboarding: load active customers at session start, require approval for customer-facing sends, validate customer profiles on save.",
+  "hooks": {
+    "SessionStart": [
+      {
+        "hooks": [
+          { "type": "command", "command": "node \"${CLAUDE_PLUGIN_ROOT}/hooks/scripts/session-start.js\"", "timeout": 10 }
+        ]
+      }
+    ],
+    "PreToolUse": [
+      {
+        "matcher": "^mcp__.*",
+        "hooks": [
+          { "type": "command", "command": "node \"${CLAUDE_PLUGIN_ROOT}/hooks/scripts/guard-outbound.js\"", "timeout": 10 }
+        ]
+      }
+    ],
+    "PostToolUse": [
+      {
+        "matcher": "Write|Edit|MultiEdit",
+        "hooks": [
+          { "type": "command", "command": "node \"${CLAUDE_PLUGIN_ROOT}/hooks/scripts/validate-profile.js\"", "timeout": 10 }
+        ]
+      }
+    ]
+  }
+}
